@@ -10,11 +10,18 @@ connectDB().then(database => {
   db = database;
 });
 
-app.get('./id', (req, res) => {
+app.get('/id', (req, res) => {
   const id = req.params;
   db.collection("tablets").findOne({ _id: id }).then(resultado => {
     res.json(resultado);
   })
+});
+
+
+app.post('/', (req, res) => {
+  const { nome, disponivel } = req.body;
+  db.collection("tablets").insertOne({ nome, disponivel })
+  res.send("Tablet Cadastrado");
 });
 
 app.listen(port, () => {
