@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 const port = 3000;
+app.use(express.json());
+
 
 const connectDB = require("./firestore");
 
@@ -10,19 +12,37 @@ connectDB().then(database => {
   db = database;
 });
 
-app.get('/id', (req, res) => {
-  const id = req.params;
-  db.collection("tablets").findOne({ _id: id }).then(resultado => {
-    res.json(resultado);
-  })
+app.post('/agendamento/informatica', (req, res) => {
+  console.log(req.body)
+  const { data_e_hora, turma, quant_equip, materia } = req.body;
+  db.collection("agendamentos")
+  .insertOne({
+    data_e_hora,
+    turma,
+    quant_equip,
+    materia,
+    tipo_equip: "notebook"
+    })
+  res.send("Agendamento Cadastrado! Ótima aula:)");
 });
 
-
-app.post('/', (req, res) => {
-  const { nome, disponivel } = req.body;
-  db.collection("tablets").insertOne({ nome, disponivel })
-  res.send("Tablet Cadastrado");
+app.post('/agendamento/equipamento', (req, res) => {
+  console.log(req.body)
+  const { data_e_hora, turma, quant_equip, materia, tipo_equip } = req.body;
+  db.collection("agendamentos")
+  .insertOne({
+    data_e_hora,
+    turma,
+    quant_equip,
+    materia,
+    tipo_equip
+    })
+  res.send("Agendamento Cadastrado! Ótima aula:)");
 });
+
+app.get('/', (req, res) => {
+  res.send("api esta legal")
+})
 
 app.listen(port, () => {
   console.log(`Express app listening at http://localhost:${port}`);
