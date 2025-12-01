@@ -1,9 +1,39 @@
-<!DOCTYPE html>
-<html>
+    <!DOCTYPE html>
+    <html>
+
     <head>
         <title>Projeto Sosi Principal</title>
         <link rel="stylesheet" href="./styleM.css">
         <link rel="script" href="scriptM.js">
+        <script type="module">
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
+            import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
+        
+            const firebaseConfig = {
+                apiKey: "AIzaSyBmRhH5hfrlqLagKa87F9rJwPyirFdo1u4",
+                authDomain: "sosi-a54ed.firebaseapp.com",
+                projectId: "sosi-a54ed",
+                storageBucket: "sosi-a54ed.firebasestorage.app",
+                messagingSenderId: "33534909162",
+                appId: "1:33534909162:web:e38ad13d922f52175ed593",
+                measurementId: "G-K7MJ1H6WP8"
+            };
+        
+            const app = initializeApp(firebaseConfig);
+            const auth = getAuth(app);
+        
+            const email = "vitor@gmail.com";
+            const senha = "vitor123";
+        
+            signInWithEmailAndPassword(auth, email, senha)
+                .then((userCredential) => {
+                    console.log("Login OK:", userCredential.user);
+                })
+                .catch((error) => {
+                    console.error("Erro ao logar:", error.code, error.message);
+                });
+        </script>
+        
     </head>
 
     <header>
@@ -14,12 +44,17 @@
     <body>
         <div class="vidro">
             <div class="inside">
-                <div class="user"><img src="../imsource/icon.png"></div>
-                
+                <div class="profile"><img src="../imsource/vitu.jpeg" class="user"></div>
+                <div class="recente">
+                    <p class="risoli">Meus agendamentos recentes</p>
+                    <button><img src="../imsource/tab.jpeg"></button>
+                    <button></button>
+                </div>
             </div>
     </body>
 
     <footer>
 
     </footer>
-</html>
+
+    </html>

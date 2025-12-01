@@ -40,7 +40,7 @@ app.post('/agendamento/equipamento', (req, res) => {
   res.send("Agendamento Cadastrado! Ótima aula:)");
 });
 
-app.get('/', (req, res) => {
+app.get('/agendamentos', (req, res) => {
   res.send("api esta legal")
 })
 
