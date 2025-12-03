@@ -7,7 +7,6 @@ body {
     background: #6F93F3;
     background: linear-gradient(340deg, rgba(111, 147, 243, 1) 0%, rgba(1, 176, 161, 1) 72%);
 }
-
 header{
     background-color: rgba(247, 247, 247, 1);
     height: 80px;
@@ -17,6 +16,47 @@ header{
     align-items: center;
     justify-content: center;
 }
+
+.buttonA {
+    background-color: rgba(237, 237, 237, 1);
+    color: rgb(0, 0, 0);
+    border-radius: 30px;
+    height: 6vh;
+    width: 18vh;
+    border: rgba(237, 237, 237, 1);
+    box-shadow: rgba(0, 0, 0, 0.192) 0px 4px 7px;
+    margin-left: 2vh;
+    margin-right: 2vh;
+    position: relative;
+    right: 6vh;
+    transition: background-color 1s;
+}
+
+.buttonA:hover{
+    cursor: pointer;
+    background-color: rgba(96, 96, 96, 1);
+}
+
+.buttonD {
+    background-color: rgba(96, 96, 96, 1);
+    color: rgb(0, 0, 0);
+    border-radius: 30px;
+    height: 6vh;
+    width: 18vh;
+    border: rgba(96, 96, 96, 1);
+    box-shadow: rgba(0, 0, 0, 0.192) 0px 4px 7px;
+    margin-left: 2vh;
+    margin-right: 2vh;
+    position: relative;
+    right: 6vh;
+    transition: background-color 1s;
+}
+
+.buttonD:hover{
+    cursor: pointer;
+    background-color: rgba(96, 96, 96, 1);
+}
+
 
 .img {
     height: 100%;
@@ -34,19 +74,65 @@ header{
     width: 136vh;
     margin-top: 10px;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
     align-items: center;
 }
 
 .inp {
     position: relative;
-    height: 7%;
+    width: 75vh;
     border-color: black;
     border-radius: 50px;
-    top: 1%;
-    width: 60%;
+    top: -2vh;
+    height: 6vh;
+    left: -4vh;
+    background-color: rgba(237, 237, 237, 1);
+    color: rgb(0, 0, 0);
+    border-radius: 30px;
+    border: rgba(237, 237, 237, 1);
+    box-shadow: rgba(0, 0, 0, 0.192) 0px 4px 7px;
+    margin-left: 2vh;
+}
+
+.vitu {
+    height: 7vh;
+    width: 7vh;
+    border-radius: 4vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: transparent;
+    position: relative;
+    right: -2vh;
+}
+.vituI {
+    height: 8vh;
+    width: 8vh;
+    border-radius: 4vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: transparent;
+    position: relative;
+    right: 0vh;
+}
+
+.est_bot {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    top: -2vh;
+    position: relative;
+    background-color: darkgray;
+    height: 6vh;
+    align-items: center;
+    border-radius: 18px;
+    width: 39vh;
+    right: -2vh;
+    box-shadow: inset 0px 1px 3px;
 }
 
 .vidro {
@@ -63,34 +149,54 @@ header{
     margin-top: 10px;
 }
 
-.button {
-    background-color: black;
-    color: rgba(247, 247, 247, 1);
-    border-radius: 30px;
-    height: 35%;
-    width: 12%;
-    border: black;
+.button2 {
+    background-color: rgba#ededed(237, 237, 237, 1);
+    color: rgb(0, 0, 0);
+    border-radius: 18px;
+    height: 4vh;
+    width: 18vh;
+    border: rgba(237, 237, 237, 1);
+    box-shadow: rgba(0, 0, 0, 0.192) 0px 4px 7px;
+    transition: background-color 1s;
 }
 
-.button:hover{
+
+.button2:hover{
     cursor: pointer;
-    animation: Log, 5s, linear;
-    
+    background-color: rgba(96, 96, 96, 1);
 }
 
 .disp{
     background-color: rgba(247, 247, 247, 1);
     width: 120vh;
     height: 65vh;
-    overflow: auto;
+    overflow-y: scroll;
 }
+.disp::-webkit-scrollbar {
+    display: none;
+}
+.disp {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
 
-.note {
-    background: #e6e9f7;
-background: radial-gradient(circle, rgba(230, 233, 247, 1) 0%, rgba(174, 187, 232, 1) 100%);
+  .note {
+    height: 14vh;
+    align-items: center;
+    box-shadow: 0 14px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border: 1px solid rgba(177, 222, 255, 0.3);
     border-radius: 16px;
     display: flex;
     justify-content: flex-start;
-    height: 14vh;
-    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.192) 0px 4px 7px;
+   
+}
+
+.bot{
+    display: flex    ;
+    justify-content: space-around;
+    position: relative;
+    right: -20vh;
 }
