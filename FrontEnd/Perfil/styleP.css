@@ -71,7 +71,7 @@ header{
 
 .buttonA:hover{
     cursor: pointer;
-    background-color: rgba(96, 96, 96, 1);
+    background-color:rgb(173, 170, 170);
 }
 
 .buttonD {
@@ -91,7 +91,7 @@ header{
 
 .buttonD:hover{
     cursor: pointer;
-    background-color: rgba(96, 96, 96, 1);
+    background-color:rgb(173, 170, 170);
 }
 .risoli {
     background-color: rgba(237, 237, 237, 1);

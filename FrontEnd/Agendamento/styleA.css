@@ -55,12 +55,12 @@ header{
 }
 
 .buttonA {
-    background-color: rgba(96, 96, 96, 1);
+    background-color:rgb(173, 170, 170);
     color: rgb(0, 0, 0);
     border-radius: 30px;
     height: 6vh;
     width: 18vh;
-    border: rgba(96, 96, 96, 1);
+    border: rgb(173, 170, 170);
     box-shadow: rgba(0, 0, 0, 0.192) 0px 4px 7px;
     margin-left: 2vh;
     margin-right: 2vh;
@@ -71,7 +71,7 @@ header{
 
 .buttonA:hover{
     cursor: pointer;
-    background-color: rgba(96, 96, 96, 1);
+    background-color:rgb(173, 170, 170);
 }
 
 .buttonD {
@@ -91,7 +91,7 @@ header{
 
 .buttonD:hover{
     cursor: pointer;
-    background-color: rgba(96, 96, 96, 1);
+    background-color: rgb(173, 170, 170);
 }
 
 .risoli {
