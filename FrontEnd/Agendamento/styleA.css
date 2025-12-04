@@ -34,12 +34,11 @@ header{
     width: 136vh;
     margin-top: 10px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
     flex-wrap: nowrap;
-    align-items: flex-start;
+    align-items: center;
 }
-
 .vidro {
     background: rgba(255, 255, 255, 0.08);
     border-radius: 16px;
@@ -163,4 +162,38 @@ header{
     border: transparent;
     position: relative;
     right: 0vh;
+}
+.S {
+    height: 8vh;
+    width: 16vh;
+    align-items: center;
+    box-shadow: 0 14px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border: 1px solid rgba(177, 222, 255, 0.3);
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.192) 0px 4px 7px;
+    margin-left: 6vh;
+    margin-right: 6vh;
+}
+
+
+.semanas{
+    
+        position: relative;
+        display: flex;
+        top: 2vh;
+}
+
+.p {
+    color: black;
+    margin-right: 5vh;
+    margin-left: 5vh;
+}
+
+.DS{
+    display: flex;
+    
 }

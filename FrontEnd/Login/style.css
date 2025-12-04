@@ -49,8 +49,8 @@ header{
 }
 .inp{
     padding: 2px;
-    width: 75%;
-    height: 5%;
+    width: 40vh;
+    height: 5vh;
     border-color: black;
     border-radius: 50px;
 }
@@ -81,8 +81,8 @@ header{
     background-color: black;
     color: rgba(247, 247, 247, 1);
     border-radius: 8px;
-    height: 10%;
-    width: 90%;
+    height: 10vh;
+    width: 40vh;
     border: black;
 }
 
