@@ -69,6 +69,10 @@ header{
     
 }
 
+.welcome{
+    height:16px;
+}
+
 @keyframes Log {
     0% {border-color: #6F93F3; 
         border-color: linear-gradient(340deg, rgba(111, 147, 243, 1) 0%, rgba(1, 176, 161, 1) 72%);}

@@ -1,9 +1,43 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Projeto Sosi login</title>
     <link rel="stylesheet" href="./style.css">
-    <script defer src="./script.js"></script>
+    <script defer">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBmRhH5hfrlqLagKa87F9rJwPyirFdo1u4",
+            authDomain: "sosi-a54ed.firebaseapp.com",
+            projectId: "sosi-a54ed",
+            storageBucket: "sosi-a54ed.firebasestorage.app",
+            messagingSenderId: "33534909162",
+            appId: "1:33534909162:web:e38ad13d922f52175ed593",
+            measurementId: "G-K7MJ1H6WP8"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+
+        function login(e) {
+            e.preventDefault();
+            const email = document.getElementById("email").value;
+            const senha = document.getElementById("senha").value;
+
+
+            signInWithEmailAndPassword(auth, email, senha)
+                .then((userCredential) => {
+                    console.log("Login OK:", userCredential.user);
+                })
+                .catch((error) => {
+                    console.error("Erro ao logar:", error.code, error.message);
+                });
+        }
+
+    </script>
 </head>
 
 <header>
@@ -13,19 +47,18 @@
 
 <body>
     <div class="vidro">
-        <div class="inside">
-            <p>Bem-vindo de volta!!</p>
+        <form onclick="login()" class="inside">
+            <h2>Bem-vindo ao SOSI!</h2>
             <br>
-            <input id="email" name="email" type="email" class="inp" placeholder="Email"><br>
-            <input id="senha" name="senha" type="password" class="inp" placeholder="Senha"><br>
-
+            <input id="email" name="email" type="email" class="inp" placeholder="    Email"><br>
+            <input id="senha" name="senha" type="password" class="inp" placeholder="    Senha"><br>
             <button class="button" type="submit" id="btnLogin">Login</button>
             <br>
-            <p>_____________________________</p>
+            <p>____________________________________</p>
             <button class="fazerL">Fazer login com Google</button>
-        </div>
+    </div>
     </div>
 </body>
 
-<footer></footer>
+
 </html>
